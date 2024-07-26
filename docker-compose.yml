@@ -1,7 +1,10 @@
 version: '2'
 services:
   proxy_pool:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: proxy_pool:latest
     container_name: proxy_pool
     volumes:
       - ./:/app    
